@@ -1,12 +1,13 @@
 import React, { ReactElement } from "react";
+import AppBootstrap from "./components/app-bootstrap/app-bootstrap";
 import { AuthProvider } from "./context/auth-context";
-import Home from "./screens/home/home";
-import Login from "./screens/login/login";
+import Navigator from "./config/navigator";
 export default function App(): ReactElement {
   return (
     <AuthProvider>
-      <Home />
-      <Login />
+      <AppBootstrap>
+        <Navigator />
+      </AppBootstrap>
     </AuthProvider>
   );
 }
